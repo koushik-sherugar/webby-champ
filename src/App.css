@@ -1,38 +1,364 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+i{
+  color: rgb(0, 183, 255);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-icon {
+  font-weight: bolder;
 }
+.brand-color {
+  color: #ca8300d8;
+  text-shadow: 2px solid black;
+}
+.nav-link {
+  color: black;
+  font-weight: 700;
+}
+/* ******************************************************header-section */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header-section {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba(255, 200, 0, 0.5),
+      rgba(255, 200, 0, 0.5)
+    ),
+    url("../src/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 127% 100%;
+  clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  /* clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%); */
+}
+
+
+.header-section ::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  position: absolute;
+  background: linear-gradient(to right, #8f6b07 0%, #b9a21e 0%, #e6d00b 0%);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.Navbar ::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  position: absolute;
+  background: linear-gradient(to right, #fdf476 0%, #ffec7f 0%, #f7eea4 0%);
+  opacity: 0.1;
+  z-index: -1;
+}
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.center-div h1 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.center-div p {
+  font-size: 1rem !important;
+  color: rgb(22, 21, 21);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-buttons a {
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+  font-family:  sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background: rgb(7, 7, 7);
+  margin: 3px 16px;
+  padding: 5px 8px;
+  border: 2px solid rgb(15, 15, 15) !important;
+
+  border-radius: 100px;
+}
+.header-buttons a :hover {
+  background: red !important;
+  color: rgb(228, 225, 225) !important;
+  text-decoration: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+/* ************************************************Card */
+.h-card {
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+  text-align: center;
+}
+.div-card {
+  background: #fff;
+  border: medium none;
+  padding: 50px !important;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.div-card h1 , .service-right h2{
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-family: "Baloo Tamma 2", cursive;
+  margin: 1.1rem 0 1rem 0;
+}
+.div-card:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(-20px);
+}
+
+/* **************************************************SERVICE   What we offer */
+.service{
+  background-color: #f7f7f9;
+  padding: 3rem 0;
+  margin-bottom:  3rem 0;
+}
+.headings {
+  margin-bottom: 2rem;
+}
+.headings h1{
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+.names h1{
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.service-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress{
+  height: 0.8rem !important;
+  margin-bottom: 1.7rem !important;
+}
+
+/* *******************************ProjectStatistics *********************************** */
+
+
+
+/* *******************************Pricing *********************************** */
+
+
+#pricing-div{
+  
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  position: relative;
+}
+#pricing-div :before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0%;
+  bottom: 0%;
+
+  position: absolute;
+  background: linear-gradient(160deg,  #f0ed4a 55%, #fff 0%);
+  z-index: -1;
+}
+
+.price-num{
+  font-size: 2rem;
+}
+.card{
+  transition: 0.3s ease-in;
+  background-color: white !important;
+  
+}
+.card:hover{
+transform: translateY(-20px);
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important;
+
+}
+ 
+.card-body li{
+
+list-style: none;
+line-height: 1.8rem;
+color: rgb(22, 21, 21);
+}
+
+.card:hover .card-footer{
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+    background-color: rgb(247 247 247) !important;
+ border:none !important;
+}
+.card-footer a {
+  background-color: white;
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+  font-family:  sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background: rgb(7, 7, 7);
+  margin: 3px 16px;
+  padding: 5px 8px;
+  border: 2px solid rgb(15, 15, 15) !important;
+
+  border-radius: 100px;
+}
+.card-footer a:hover {
+  background: rgb(226, 216, 69) !important;
+  color: rgb(3, 3, 3) !important;
+  border: 2px solid rgb(241, 235, 235);
+  text-decoration: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.card:hover .card-header , .card:hover .price-num{
+  color:rgba(238, 133, 13, 0.932);
+}
+
+.second-card{
+  transform: translateY(-20px);
+}
+
+
+/* **********************************customer-reviews***************************************** */
+
+.customer-reviews{
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 0;
+}
+
+.box{
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+
+
+/* ************************************contactus***************************************** */
+
+.contactus{
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+  position: relative;
+}
+.contactus :before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0%;
+  bottom: 0%;
+
+  position: absolute;
+  background: linear-gradient(320deg,  #f0ed4a 65%, #fff 0%);
+  z-index: -1;
+}
+
+/* .form-button button{
+  border-radius: 40%;
+  background-color: yellow;
+  color: white;
+} */
+
+
+/* ******************************newsLetter**************************************** */
+.newsLetter{
+width: 100%;
+height: auto;
+margin: 4rem;
+
+}
+.newsLetter input{
+  border-radius: 100px 0 0 100px !important;
+
+}
+.newsLetter span{
+  border-radius: 0 100px 100px 0;
+  color: black;
+  background-color: yellow;
+  cursor: pointer;
+  
+}
+
+/* **************************footer************************************* */
+.footersection{
+  width: 100%;
+  height: auto;
+  padding: 3rem 0 1rem 0;
+  position: relative;
+  background: #00abff;
+}
+.footersection p{
+  color:white;
+}
+.footersection li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  
+
+}
+.footersection li a{
+  line-height: 2rem;
+    list-style: none;
+  color: #fff ;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+}
+ .footer-news-mail input{
+  border-radius: 100px 0 0 100px !important;
+
+}
+.newsbtn span{
+  border-radius: 0 100px 100px 0;
+  color: black;
+  background-color: yellow !important;
+  cursor: pointer;
+}
+.footersection h3 {
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
 }
