@@ -9,6 +9,7 @@ import {
   NavLink,
 } from "reactstrap";
 
+import service from "./Service";
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +19,7 @@ const Header = (props) => {
     <div>
       <Navbar className="Navbar fixed-top" light expand="md">
         <div className="container  p-2 ">
-          <NavbarBrand className="brand-icon " href="/">
+          <NavbarBrand className="brand-icon " href="/k">
             webby <span className=" brand-color">Champ</span>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
@@ -30,7 +31,7 @@ const Header = (props) => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" href="/service/">
+                <NavLink className="nav-link" href="/Service">
                   service
                 </NavLink>
               </NavItem>
